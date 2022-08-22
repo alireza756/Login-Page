@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div#get_code{
+            display: none;
+        }
+        p#alert{
+            font-size: 40px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            top: -120px;
+            left: 0;
+            right: 0;
+            position: fixed;
+            transition: .10s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+        body{
+            outline: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p id="alert">The desired number or entered password is wrong</p>
+    <div class="box">
+    <form action="">
+        <h1>Login</h1>
+        <p>phone number</p>
+        <input type="text" id="phone_number">
+        <div id="get_code">
+            <p>Code</p>
+            <input id="input_code" type="text" maxlength="9" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '-').replace(/(\..*)\./g, '$1');">
+        </div>
+        <input type="button" id="get_code_num" value="Login">
+    </form></div>
+<!-- alireza cheraghliei -->
+    <script src="script.js"></script>
+</body>
+</html>
