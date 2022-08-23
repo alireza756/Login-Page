@@ -1,11 +1,9 @@
 let btn = document.getElementById('get_code_num');
 let true_code = [];
-
-alert('Hello my friend , Default mobile number for testing => 09123456789');
+alert('Hello, my friend, thank you for choosing my program');
 
 btn.addEventListener('click' , function(){
-    let phone_number = document.getElementById('phone_number').value;
-console.log(phone_number.length == 11);
+let phone_number = document.getElementById('phone_number').value;
 if(phone_number.length == 11 ){
     document.getElementById('alert').style.top = '-120px';
     document.getElementById('get_code').style.display = ('block');
@@ -19,7 +17,8 @@ for(let a of z){
     }
 }}
 if(Number(true_code[0] + true_code[1] + true_code[2] + true_code[3] + true_code[4]) == code){
-    console.log(`hello ${phone_number}`);
+    let Discount = Math.floor(Math.random() * 20);
+    console.log(`hello ${phone_number} ، You got ${Discount}% off`);
 }
 }
 else{
@@ -44,8 +43,6 @@ input.addEventListener('keypress',function(event){
     input.value += '-';
     }}
 })
-input.addEventListener('keydown' , function(){
 
-})
 
 //alireza cheraghliei
