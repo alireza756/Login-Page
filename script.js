@@ -1,8 +1,12 @@
 let btn = document.getElementById('get_code_num');
 let true_code = [];
+
 alert('Hello my friend , Default mobile number for testing => 09123456789');
+
 btn.addEventListener('click' , function(){
-if(document.getElementById('phone_number').value == '09123456789'){
+    let phone_number = document.getElementById('phone_number').value;
+console.log(phone_number.length == 11);
+if(phone_number.length == 11 ){
     document.getElementById('alert').style.top = '-120px';
     document.getElementById('get_code').style.display = ('block');
 request();
@@ -15,7 +19,7 @@ for(let a of z){
     }
 }}
 if(Number(true_code[0] + true_code[1] + true_code[2] + true_code[3] + true_code[4]) == code){
-    console.log(`hello 09123456789`);
+    console.log(`hello ${phone_number}`);
 }
 }
 else{
